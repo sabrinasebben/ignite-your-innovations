@@ -369,7 +369,7 @@ function SevbenLandingPage() {
                   </p>
                   <a
                     href="mailto:contato@sevbenoficial.com"
-                    className="mt-2 block break-all text-base font-semibold text-white hover:text-blue-300 sm:text-lg"
+                    className="mt-2 block whitespace-nowrap text-sm font-semibold text-white hover:text-blue-300 sm:text-base lg:text-lg"
                   >
                     contato@sevbenoficial.com
                   </a>
@@ -380,7 +380,7 @@ function SevbenLandingPage() {
                   </p>
                   <a
                     href="mailto:financeiro@sevbenoficial.com"
-                    className="mt-2 block break-all text-base font-semibold text-white hover:text-blue-300 sm:text-lg"
+                    className="mt-2 block whitespace-nowrap text-sm font-semibold text-white hover:text-blue-300 sm:text-base lg:text-lg"
                   >
                     financeiro@sevbenoficial.com
                   </a>
