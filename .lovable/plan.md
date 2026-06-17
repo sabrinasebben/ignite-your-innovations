@@ -1,54 +1,33 @@
-# Salvar Versão 1.0 — SEVBEN Landing Page
+# Incorporar logotipo SEVBEN
 
 ## Objetivo
-Congelar e documentar o estado atual do projeto como **versão 1.0** na memória persistente do projeto.
+Substituir o placeholder atual (quadrado com gradiente e letra "S") pelo logotipo oficial enviado pelo usuário.
 
-## Estado Atual (congelado)
+## Abordagem
 
-### Stack Técnico
-- **Vite 7** + **React 19** + **TypeScript 5**
-- **Tailwind CSS v4** (via `@tailwindcss/vite`)
-- **Lucide React** (ícones)
-- **SPA estática pura** — sem router, sem SSR, sem servidor, sem backend
+### 1. Preparar os assets
+A imagem enviada contém o logo completo ("Grupo SEVBEN" + tagline) sobre fundo azul-marinho. Vou extrair duas versões com fundo transparente via `imagegen--edit_image`:
 
-### Build / Deploy
-- `vite.config.ts` com `base: "./"` para compatibilidade com GitHub Pages (subpath)
-- Saída: `dist/index.html` + assets com hash
-- `public/CNAME` incluído no build para domínio customizado
-- `npm run build` gera o site estático pronto para publicação
+- **Ícone "S"** (apenas o símbolo gráfico em azul/cinza) — para uso no header e como favicon. Fundo transparente.
+- **Logo horizontal completo** (símbolo + "GRUPO SEVBEN" em branco) — opcional, para uso destacado.
 
-### Seções da Landing Page (App.tsx)
-1. **Header** — sticky, blur backdrop, menu hamburger mobile (estado `menuOpen`)
-2. **Hero** — gradiente radial, título principal, 2 CTAs, 3 cards de destaque (Apps / Cursos / Escala), card de pilares com checkmarks
-3. **Sobre** — Missão / Visão / Valores em cards
-4. **Serviços** — 3 cards: Criação de aplicativos, Desenvolvimento de cursos digitais, Estruturação de negócios digitais
-5. **Diferenciais** — 6 tags com ícones de check
-6. **Contato** — 2 cards de e-mail:
-   - `contato@sevbenoficial.com`
-   - `financeiro@sevbenoficial.com`
-   - Ambos com `whitespace-nowrap` e fonte responsiva para ficar em uma única linha
-7. **Footer** — copyright + tagline
+Ambos serão hospedados via `lovable-assets` (CDN), seguindo a prática do projeto.
 
-### Design Tokens (definidos)
-- Backgrounds: `slate-50` / `white` / `slate-950` (seção escura do contato)
-- Acento primário: gradiente `blue-600` → `indigo-700`
-- Texto: `slate-900` títulos, `slate-600` corpo, `slate-500` secundário
-- Cards: `rounded-2xl`, borda `slate-200`, `shadow-sm`
-- Largura máxima: `max-w-7xl`
-- Fonte: sans-serif do sistema (sem fonte customizada carregada)
+### 2. Aplicar no site (`src/App.tsx`)
 
-### SEO (index.html)
-- Título: "SEVBEN | Soluções Inteligentes para Negócios Digitais"
-- Meta tags OG + Twitter com imagem social
-- `lang="pt-BR"`
+**Header (desktop + mobile):**
+- Substituir o quadrado gradiente `<div>` com letra "S" por `<img>` do ícone, mantendo as mesmas dimensões (h-11 w-11).
+- Manter o texto "SEVBEN" + tagline ao lado (já existente).
 
-## Ação
-Gravar dois arquivos de memória:
-1. `mem://index.md` — índice do projeto com regras core e referência à v1.0
-2. `mem://versions/v1.0.md` — snapshot completo do estado congelado descrito acima
+**Hero — card escuro lateral:**
+- Substituir o quadrado gradiente "S" no canto superior direito pelo mesmo ícone, dimensões equivalentes (h-12 w-12).
 
-## Arquivos Chave Congelados
-- `src/App.tsx` — componente único da landing page
-- `index.html` — SEO e ponto de entrada
-- `vite.config.ts` — configuração de build estático
-- `package.json` — dependências mínimas (React, Vite, Tailwind, Lucide)
+### 3. Favicon (`index.html`)
+- Adicionar `<link rel="icon">` apontando para o ícone do logo, para que apareça também na aba do navegador.
+
+## Fora de escopo
+- Não alterar paleta, layout, tipografia, conteúdo ou demais seções.
+- Não embutir a imagem original com fundo azul; apenas o ícone limpo com transparência.
+
+## Resultado esperado
+Logo oficial da SEVBEN aparecendo no header (topo do site), no card do hero e na aba do navegador, mantendo 100% do design e conteúdo atual.
