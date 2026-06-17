@@ -1,28 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ArrowRight, CheckCircle2 } from "lucide-react";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "SEVBEN — Soluções inteligentes, negócios escaláveis" },
-      {
-        name: "description",
-        content:
-          "A SEVBEN cria aplicativos, cursos digitais e estrutura negócios digitais com visão estratégica, organização e potencial de escala.",
-      },
-      { property: "og:title", content: "SEVBEN — Soluções inteligentes, negócios escaláveis" },
-      {
-        property: "og:description",
-        content:
-          "Tecnologia, estrutura e crescimento para negócios digitais. Aplicativos, cursos e produtos digitais com visão de escala.",
-      },
-    ],
-  }),
-  component: SevbenLandingPage,
-});
-
-function SevbenLandingPage() {
+export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const services = [
