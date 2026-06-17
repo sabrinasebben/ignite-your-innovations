@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "SEVBEN | Soluções Inteligentes para Negócios Digitais" },
+      { name: "description", content: "A SEVBEN desenvolve aplicativos, cursos digitais e soluções tecnológicas com foco em organização, escalabilidade e crescimento sustentável." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "SEVBEN | Soluções Inteligentes para Negócios Digitais" },
+      { property: "og:description", content: "A SEVBEN desenvolve aplicativos, cursos digitais e soluções tecnológicas com foco em organização, escalabilidade e crescimento sustentável." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "SEVBEN | Soluções Inteligentes para Negócios Digitais" },
+      { name: "twitter:description", content: "A SEVBEN desenvolve aplicativos, cursos digitais e soluções tecnológicas com foco em organização, escalabilidade e crescimento sustentável." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/giDJONN0vDZLnfQEWJoFcsVWsPS2/social-images/social-1781660524204-ChatGPT_Image_16_de_jun._de_2026,_22_41_39.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/giDJONN0vDZLnfQEWJoFcsVWsPS2/social-images/social-1781660524204-ChatGPT_Image_16_de_jun._de_2026,_22_41_39.webp" },
     ],
     links: [
       {
