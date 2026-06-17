@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ArrowRight, CheckCircle2 } from "lucide-react";
+import sevbenIcon from "@/assets/sevben-icon.png";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,9 +53,12 @@ export default function App() {
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#topo" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-lg font-bold text-white shadow-md">
-              S
-            </div>
+            <img
+              src={sevbenIcon}
+              alt="SEVBEN"
+              className="h-11 w-11 object-contain"
+            />
+
             <div className="flex flex-col leading-tight">
               <span className="text-base font-semibold tracking-tight text-slate-900">SEVBEN</span>
               <span className="hidden text-xs text-slate-500 sm:block">
@@ -183,9 +187,12 @@ export default function App() {
                         Startup mindset, execução com estrutura.
                       </p>
                     </div>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-lg font-bold text-white">
-                      S
-                    </div>
+                    <img
+                      src={sevbenIcon}
+                      alt="SEVBEN"
+                      className="h-12 w-12 object-contain"
+                    />
+
                   </div>
 
                   <ul className="mt-8 space-y-3">
